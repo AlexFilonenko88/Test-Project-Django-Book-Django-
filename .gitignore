@@ -1,0 +1,45 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальное окружение
+venv/
+env/
+.venv/
+ENV/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static_root/
+
+# Миграции (раскомментируй, если не хочешь коммитить миграции — обычно НЕ нужно)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Переменные окружения
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Кэш и тесты
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Прочее
+*.sqlite3
+celerybeat-schedule
+*.pot
+.DS_Store

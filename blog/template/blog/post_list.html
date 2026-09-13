@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Блог — Последние записи{% endblock %}
+
+{% block content %}
+    <h1>Наш корпоративный блог</h1>
+    <p>Здесь мы делимся новостями и статьями.</p>
+
+    <div class="articles">
+        {% for post in posts %}
+            <article class="article-card">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.excerpt }}</p>
+                <a href="{% url 'post_detail' post.pk %}">Читать далее...</a>
+            </article>
+        {% empty %}
+            <p>Пока нет ни одной записи.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
